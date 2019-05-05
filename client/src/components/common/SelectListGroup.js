@@ -8,7 +8,6 @@ const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
       {option.label}
     </option>
   ));
-
   return (
     <div className="form-group">
       <select
@@ -21,7 +20,7 @@ const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
       >
         {selectOptions}
       </select>
-      {info && <small className="form=text text-muted">{info}</small>}
+      {info && <small className="form-text text-muted">{info}</small>}
       {error && <div className="invalid-feedback">{error}</div>}
     </div>
   );
@@ -29,8 +28,8 @@ const SelectListGroup = ({ name, value, error, info, onChange, options }) => {
 
 SelectListGroup.propTypes = {
   name: PropTypes.string.isRequired,
-  info: PropTypes.string,
   value: PropTypes.string.isRequired,
+  info: PropTypes.string,
   error: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   options: PropTypes.array.isRequired

@@ -10,32 +10,33 @@ const posts = require('./routes/api/posts');
 
 const app = express();
 
-//Body parser Middleware
+// Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//DB Config
+// DB Config
 const db = require('./config/keys').mongoURI;
 
-// Connect to MongoDB through Mongoose
+// Connect to MongoDB
 mongoose
   .connect(db)
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
-//Passport middleware
+// Passport middleware
 app.use(passport.initialize());
 
-//Passport Config
-require('./Config/passport')(passport);
+// Passport Config
+require('./config/passport')(passport);
 
-//use routes
+// Use Routes
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
-//server static assets if in production
+// Server static assets if in production
 if (process.env.NODE_ENV === 'production') {
+  // Set static folder
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) => {

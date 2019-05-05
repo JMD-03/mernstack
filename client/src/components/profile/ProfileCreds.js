@@ -22,14 +22,14 @@ class ProfileCreds extends Component {
         <p>
           {exp.location === '' ? null : (
             <span>
-              <strong>Location: {exp.location}</strong>
+              <strong>Location: </strong> {exp.location}
             </span>
           )}
         </p>
         <p>
           {exp.description === '' ? null : (
             <span>
-              <strong>Description: {exp.description}</strong>
+              <strong>Description: </strong> {exp.description}
             </span>
           )}
         </p>
@@ -51,19 +51,17 @@ class ProfileCreds extends Component {
           <strong>Degree:</strong> {edu.degree}
         </p>
         <p>
-          <strong>Field of Study:</strong> {edu.fieldofstudy}
+          <strong>Field Of Study:</strong> {edu.fieldofstudy}
         </p>
         <p>
           {edu.description === '' ? null : (
             <span>
-              <strong>Description: </strong>
-              {edu.description}
+              <strong>Description: </strong> {edu.description}
             </span>
           )}
         </p>
       </li>
     ));
-
     return (
       <div className="row">
         <div className="col-md-6">

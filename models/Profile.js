@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-//create schema
+// Create Schema
 const ProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
@@ -57,14 +57,13 @@ const ProfileSchema = new Schema({
       },
       current: {
         type: Boolean,
-        required: false
+        default: false
       },
       description: {
         type: String
       }
     }
   ],
-
   education: [
     {
       school: {
@@ -88,16 +87,15 @@ const ProfileSchema = new Schema({
       },
       current: {
         type: Boolean,
-        required: false
+        default: false
       },
       description: {
         type: String
       }
     }
   ],
-
   social: {
-    yotube: {
+    youtube: {
       type: String
     },
     twitter: {

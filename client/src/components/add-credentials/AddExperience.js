@@ -72,7 +72,7 @@ class AddExperience extends Component {
               </Link>
               <h1 className="display-4 text-center">Add Experience</h1>
               <p className="lead text-center">
-                Add any job or positionthat you have had, previous or current.
+                Add any job or position that you have had in the past or current
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
@@ -84,7 +84,7 @@ class AddExperience extends Component {
                   error={errors.company}
                 />
                 <TextFieldGroup
-                  placeholder="* Job title"
+                  placeholder="* Job Title"
                   name="title"
                   value={this.state.title}
                   onChange={this.onChange}
@@ -134,7 +134,7 @@ class AddExperience extends Component {
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the position"
+                  info="Tell us about the the position"
                 />
                 <input
                   type="submit"
@@ -161,7 +161,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(
-  mapStateToProps,
-  { addExperience }
-)(withRouter(AddExperience));
+export default connect(mapStateToProps, { addExperience })(
+  withRouter(AddExperience)
+);

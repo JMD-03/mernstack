@@ -4,7 +4,6 @@ const isEmpty = require('./is-empty');
 module.exports = function validatePostInput(data) {
   let errors = {};
 
-  // ? is ternary expression     data.name=true : ''=false
   data.text = !isEmpty(data.text) ? data.text : '';
 
   if (!Validator.isLength(data.text, { min: 10, max: 300 })) {

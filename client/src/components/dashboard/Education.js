@@ -11,7 +11,6 @@ class Education extends Component {
 
   render() {
     const education = this.props.education.map(edu => (
-      //create table that loops through education array
       <tr key={edu._id}>
         <td>{edu.school}</td>
         <td>{edu.degree}</td>
@@ -56,7 +55,4 @@ Education.propTypes = {
   deleteEducation: PropTypes.func.isRequired
 };
 
-export default connect(
-  null,
-  { deleteEducation }
-)(Education);
+export default connect(null, { deleteEducation })(Education);

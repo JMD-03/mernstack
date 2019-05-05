@@ -11,7 +11,6 @@ class Experience extends Component {
 
   render() {
     const experience = this.props.experience.map(exp => (
-      //create table that loops through experience array
       <tr key={exp._id}>
         <td>{exp.company}</td>
         <td>{exp.title}</td>
@@ -56,7 +55,4 @@ Experience.propTypes = {
   deleteExperience: PropTypes.func.isRequired
 };
 
-export default connect(
-  null,
-  { deleteExperience }
-)(Experience);
+export default connect(null, { deleteExperience })(Experience);
