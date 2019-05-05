@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require('./node_modules/express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const passport = require('passport');
+const passport = require('./node_modules/passport');
 
 //load validation
 const validateProfileInput = require('../../validation/profile');

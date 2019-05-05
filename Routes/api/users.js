@@ -1,10 +1,10 @@
-const express = require('express');
+const express = require('./node_modules/express');
 const router = express.Router();
-const gravatar = require('gravatar');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const gravatar = require('./node_modules/gravatar');
+const bcrypt = require('./node_modules/bcryptjs');
+const jwt = require('./node_modules/jsonwebtoken');
 const keys = require('../../Config/keys');
-const passport = require('passport');
+const passport = require('./node_modules/passport');
 
 //load input validation
 const validateRegisterInput = require('../../validation/register');
